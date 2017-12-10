@@ -16,7 +16,10 @@ add es lint in package.json:
     "eslint-plugin-react": "^7.5.1"
   }
 
-  add eslintrc.json
+add eslintrc.json
   npm install
   update atom package
   restart atom
+
+install propTypes
+  npm i -S prop-types
