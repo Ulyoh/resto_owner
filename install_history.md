@@ -10,7 +10,7 @@ create react app:
   npm install --save react-redux
   npm install --save material-ui
 
-3)
+7)
 add eslintrc.json
   npm install
   update atom package
@@ -34,3 +34,6 @@ npm install
 6) if necessary:
 install eslint plugin jsx ally
   npm i -S eslint-plugin-jsx-a11y@^5.1.1
+
+3)
+npm i -S react-test-renderer
