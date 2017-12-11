@@ -37,3 +37,16 @@ install eslint plugin jsx ally
 
 3)
 npm i -S react-test-renderer
+
+8)
+npm install --save-dev jest-html
+
+9) in package.json add manually:
+{
+  "jest": {
+    "snapshotSerializers": ["jest-html"]
+  },
+  "scripts": {
+    "jest-html": "jest-html"
+  }
+}
