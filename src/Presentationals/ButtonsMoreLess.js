@@ -17,30 +17,30 @@ const ButtonsMoreLess = (props) => {
   const toDo = props.orderToDo;
 
   const style = {
-    margin: 12,
+    margin: '12',
   };
 
   return (
     <div>
       <RaisedButton
-        label="+"
-        disable={done >= toDo}
-        onClick={oneDone}
+        className="oneMoreToDoBtn"
+        label={props.labelOneMoreToDo}
+        disabled={done <= 0}
+        onClick={oneMoreTodo}
         style={style}
       />
       {`${done}/${toDo}`}
-      <span>
-        <RaisedButton
-          label="-"
-          disable={done <= 0}
-          onClick={oneMoreTodo}
-          style={style}
-        />
-        {props.children}
-      </span>
       <RaisedButton
-        label="fini"
-        disable={done >= toDo}
+        className="oneDoneBtn"
+        label={props.labelOneDone}
+        disabled={done >= toDo}
+        onClick={oneDone}
+        style={style}
+      />
+      {props.children}
+      <RaisedButton
+        label={props.labelAllDone}
+        disabled={done >= toDo}
         onClick={allDone}
         style={style}
       />
@@ -52,6 +52,9 @@ ButtonsMoreLess.propTypes = {
   oneDone: PropTypes.func.isRequired,
   oneMoreTodo: PropTypes.func.isRequired,
   allDone: PropTypes.func.isRequired,
+  labelOneDone: PropTypes.string.isRequired,
+  labelOneMoreToDo: PropTypes.string.isRequired,
+  labelAllDone: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,
   orderDone: PropTypes.number.isRequired,
   orderToDo: PropTypes.number.isRequired,
