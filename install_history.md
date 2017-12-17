@@ -50,3 +50,6 @@ npm install --save-dev jest-html
     "jest-html": "jest-html"
   }
 }
+
+10) install enzyme:
+npm i --save-dev enzyme enzyme-adapter-react-16
