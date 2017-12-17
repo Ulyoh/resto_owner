@@ -709,6 +709,58 @@ exports[`ButtonsMoreLess should show "one more" and "all done" buttons disabled 
     </button>
   </div>
 </div>
+------------HTML PREVIEW---------------
+<div>
+  <div style="-webkit-tap-highlight-color:rgba(0,0,0,0);background-color:#ffffff;border-radius:2px;box-shadow:0 1px 6px rgba(0, 0, 0, 0.12),
+           0 1px 4px rgba(0, 0, 0, 0.12);box-sizing:border-box;color:rgba(0, 0, 0, 0.87);display:inline-block;font-family:Roboto, sans-serif;margin:12;min-width:88px;mui-prepared:;transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;">
+    <button
+      disable
+      style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-color:#ffffff;border:10px;border-radius:2px;box-sizing:border-box;cursor:pointer;display:inline-block;font-family:Roboto, sans-serif;font-size:inherit;font-weight:inherit;height:36px;line-height:36px;margin:0;mui-prepared:;outline:none;padding:0;position:relative;text-align:center;text-decoration:none;transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;vertical-align:;width:100%;"
+      type="button"
+    >
+      <div>
+        <div style="background-color:;border-radius:2px;height:36px;mui-prepared:;top:0;transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;">
+          <span style="color:rgba(0, 0, 0, 0.87);font-size:14px;font-weight:500;letter-spacing:0;margin:0;mui-prepared:;opacity:1;padding-left:16px;padding-right:16px;position:relative;text-transform:uppercase;user-select:none;">
+            -
+          </span>
+        </div>
+      </div>
+    </button>
+  </div>
+  5/5
+  <div style="-webkit-tap-highlight-color:rgba(0,0,0,0);background-color:#ffffff;border-radius:2px;box-shadow:0 1px 6px rgba(0, 0, 0, 0.12),
+           0 1px 4px rgba(0, 0, 0, 0.12);box-sizing:border-box;color:rgba(0, 0, 0, 0.87);display:inline-block;font-family:Roboto, sans-serif;margin:12;min-width:88px;mui-prepared:;transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;">
+    <button
+      style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-color:#ffffff;border:10px;border-radius:2px;box-sizing:border-box;cursor:pointer;display:inline-block;font-family:Roboto, sans-serif;font-size:inherit;font-weight:inherit;height:36px;line-height:36px;margin:0;mui-prepared:;outline:none;padding:0;position:relative;text-align:center;text-decoration:none;transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;vertical-align:;width:100%;"
+      type="button"
+    >
+      <div>
+        <div style="background-color:;border-radius:2px;height:36px;mui-prepared:;top:0;transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;">
+          <span style="color:rgba(0, 0, 0, 0.87);font-size:14px;font-weight:500;letter-spacing:0;margin:0;mui-prepared:;opacity:1;padding-left:16px;padding-right:16px;position:relative;text-transform:uppercase;user-select:none;">
+            +
+          </span>
+        </div>
+      </div>
+    </button>
+  </div>
+  order&#39;s name
+  <div style="-webkit-tap-highlight-color:rgba(0,0,0,0);background-color:#ffffff;border-radius:2px;box-shadow:0 1px 6px rgba(0, 0, 0, 0.12),
+           0 1px 4px rgba(0, 0, 0, 0.12);box-sizing:border-box;color:rgba(0, 0, 0, 0.87);display:inline-block;font-family:Roboto, sans-serif;margin:12;min-width:88px;mui-prepared:;transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;">
+    <button
+      disable
+      style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-color:#ffffff;border:10px;border-radius:2px;box-sizing:border-box;cursor:pointer;display:inline-block;font-family:Roboto, sans-serif;font-size:inherit;font-weight:inherit;height:36px;line-height:36px;margin:0;mui-prepared:;outline:none;padding:0;position:relative;text-align:center;text-decoration:none;transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;vertical-align:;width:100%;"
+      type="button"
+    >
+      <div>
+        <div style="background-color:;border-radius:2px;height:36px;mui-prepared:;top:0;transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;">
+          <span style="color:rgba(0, 0, 0, 0.87);font-size:14px;font-weight:500;letter-spacing:0;margin:0;mui-prepared:;opacity:1;padding-left:16px;padding-right:16px;position:relative;text-transform:uppercase;user-select:none;">
+            finis
+          </span>
+        </div>
+      </div>
+    </button>
+  </div>
+</div>
 `;
 
 exports[`ButtonsMoreLess should show all buttons enable 1`] = `
