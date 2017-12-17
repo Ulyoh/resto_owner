@@ -3,13 +3,16 @@ import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 
 const ButtonsMoreLess = (props) => {
-  const oneDone = () => {
+  const oneDone = (e) => {
+    e.preventDefault();
     props.oneDone(props.orderId);
   };
-  const oneMoreTodo = () => {
+  const oneMoreTodo = (e) => {
+    e.preventDefault();
     props.oneMoreTodo(props.orderId);
   };
-  const allDone = () => {
+  const allDone = (e) => {
+    e.preventDefault();
     props.allDone(props.orderId);
   };
 
@@ -39,6 +42,7 @@ const ButtonsMoreLess = (props) => {
       />
       {props.children}
       <RaisedButton
+        className="allDoneBtn"
         label={props.labelAllDone}
         disabled={done >= toDo}
         onClick={allDone}
