@@ -15,6 +15,7 @@ const datas = {
     labelOnDone: '-',
     labelOneMoreToDo: '+',
     labelAllDone: 'finis', // TODO: gérer le pluriel
+    goUp: 'Début',
   },
   lists: {
     0: {

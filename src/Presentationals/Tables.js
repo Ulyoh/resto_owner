@@ -4,7 +4,7 @@ import TableOrder from './TableOrder';
 
 const Tables = props => (
   props.tablesList.map(table =>
-    <TableOrder key={`table${table.tableId}`}{...table} />)
+    <TableOrder id="tables" key={`table${table.tableId}`}{...table} />)
 );
 
 Tables.propTypes = {
