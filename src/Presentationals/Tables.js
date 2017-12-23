@@ -8,7 +8,7 @@ const Tables = props => (
 );
 
 Tables.propTypes = {
-  tablesList: PropTypes.arrayOf(PropTypes.objectOf(TableOrder.object).isRequire).isRequired,
+  tablesList: PropTypes.array.isRequired, // eslint-disable-line react/forbid-prop-types
 };
 
 export default Tables;
