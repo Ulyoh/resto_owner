@@ -17,10 +17,13 @@ const toggleFilterStatus = (state, action) => {
     default: return state;
   }
 };
-
-const filter = (state, action) => ({
+const initState = {
+  showGroups: null,
+  showStatus: null,
+};
+const filters = (state = initState, action) => ({
   showGroups: toggleFilterGroup(state.showGroups, action),
   showStatus: toggleFilterStatus(state.showStatus, action),
 });
 
-export default filter;
+export default filters;

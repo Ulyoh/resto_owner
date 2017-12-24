@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import filter from './filter';
+import filters from './filters';
 import orders from './orders';
 
 const ordersView = combineReducers({
-  filter,
   orders,
+  filters,
 });
 
 export default ordersView;
