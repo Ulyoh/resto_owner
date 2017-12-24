@@ -12,7 +12,7 @@ const updateOrderAllDone = (order) => {
   return Object.assign({}, order, { done: order.toDo });
 };
 
-const orders = (state, action) => {
+const orders = (state = null, action) => {
   switch (action.type) {
     case 'ONE_DONE':
       return state.map((order) => {
