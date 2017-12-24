@@ -11,4 +11,11 @@ const empty = {
   forESLint: 'shutup',
 };
 
-export { status, empty };
+const actionsTypes = {
+  TOGGLE_FILTER_GROUP: 'TOGGLE_FILTER_GROUP',
+  TOGGLE_FILTER_STATUS: 'TOGGLE_FILTER_STATUS',
+  ONE_DONE: 'ONE_DONE',
+  ON_MORE_TODO: 'ON_MORE_TODO',
+  ALL_DONE: 'ALL_DONE',
+};
+export { status, empty, actionsTypes };
