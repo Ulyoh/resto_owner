@@ -5,6 +5,12 @@ import Order from './Order';
 
 Enzyme.configure({ adapter: new Adapter() });
 
+// mock children containers:
+jest.mock('../Containers/ContButtonsMoreLess', () => {
+  const ContButtonsMoreLess = () => (<span />);
+  return ContButtonsMoreLess;
+});
+
 const props = {
   orderId: 'orderId',
 };

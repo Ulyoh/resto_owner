@@ -7,11 +7,15 @@ import TableOrder from './TableOrder';
 
 Enzyme.configure({ adapter: new Adapter() });
 
+// mock children containers:
+jest.mock('../Containers/ContButtonsMoreLess', () => {
+  const ContButtonsMoreLess = () => (<span />);
+  return ContButtonsMoreLess;
+});
 
 function setup(props) {
   return mount(<MuiThemeProvider><TableOrder {...props} /></MuiThemeProvider>);
 }
-
 
 describe('TableOrder', () => {
   it('should contain the table number as a title', () => {
