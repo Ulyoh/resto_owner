@@ -8,9 +8,9 @@ import TableOrder from './TableOrder';
 Enzyme.configure({ adapter: new Adapter() });
 
 // mock children containers:
-jest.mock('../Containers/ContButtonsMoreLess', () => {
-  const ContButtonsMoreLess = () => (<span />);
-  return ContButtonsMoreLess;
+jest.mock('../Containers/ButtonsMoreLessCont', () => {
+  const ButtonsMoreLessCont = () => (<span />);
+  return ButtonsMoreLessCont;
 });
 
 function setup(props) {

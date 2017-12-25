@@ -1,10 +1,10 @@
-import { mapStateToProps } from './ContButtonsMoreLess';
+import { mapStateToProps } from './ButtonsMoreLessCont';
 import initOrders from '../datas/initOrders';
 import datas from '../datas/datas';
 
 const initialState = { orders: initOrders };
 
-describe('ContButtonsMoreLess:', () => {
+describe('ButtonsMoreLessCont:', () => {
   it('should convert the state to props', () => {
     expect(mapStateToProps(initialState, { orderId: 1 })).toEqual({
       orderId: '1',

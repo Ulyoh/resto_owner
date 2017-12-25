@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ContButtonsMoreLess from '../Containers/ContButtonsMoreLess';
+import ButtonsMoreLessCont from '../Containers/ButtonsMoreLessCont';
 
 const Order = props => (
-  <ContButtonsMoreLess orderId={props.orderId} />
+  <ButtonsMoreLessCont orderId={props.orderId} />
 );
 
 Order.propTypes = {

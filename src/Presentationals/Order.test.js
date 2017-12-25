@@ -6,9 +6,9 @@ import Order from './Order';
 Enzyme.configure({ adapter: new Adapter() });
 
 // mock children containers:
-jest.mock('../Containers/ContButtonsMoreLess', () => {
-  const ContButtonsMoreLess = () => (<span />);
-  return ContButtonsMoreLess;
+jest.mock('../Containers/ButtonsMoreLessCont', () => {
+  const ButtonsMoreLessCont = () => (<span />);
+  return ButtonsMoreLessCont;
 });
 
 const props = {
@@ -26,9 +26,9 @@ function setup() {
 
 describe('Order', () => {
   const { enzymeWrapper } = setup();
-  const { ...buttonsProps } = enzymeWrapper.find('ContButtonsMoreLess').props();
+  const { ...buttonsProps } = enzymeWrapper.find('ButtonsMoreLessCont').props();
 
-  it('should give the right props to ContButtonsMoreLess', () => {
+  it('should give the right props to ButtonsMoreLessCont', () => {
     expect(buttonsProps).toEqual({
       orderId: 'orderId',
     });
