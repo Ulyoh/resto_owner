@@ -12,7 +12,7 @@ const datas = {
     filter: 'filtre',
     noOrders: 'pas de commandes en cours',
     prepared: 'prêt',
-    labelOnDone: '-',
+    labelOneDone: '-',
     labelOneMoreToDo: '+',
     labelAllDone: 'finis', // TODO: gérer le pluriel
     goUp: 'Début',
