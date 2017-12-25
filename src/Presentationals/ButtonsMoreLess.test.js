@@ -12,9 +12,9 @@ Enzyme.configure({ adapter: new Adapter() });
 function setup() {
   const props = {
     orderId: 'id',
-    oneMoreTodo: jest.fn(),
-    oneDone: jest.fn(),
-    allDone: jest.fn(),
+    oneMoreTodoClick: jest.fn(),
+    oneDoneClick: jest.fn(),
+    allDoneClick: jest.fn(),
     labelOneDone: datas.txt.labelOneDone,
     labelOneMoreToDo: datas.txt.labelOneMoreToDo,
     labelAllDone: datas.txt.labelAllDone,
@@ -32,37 +32,37 @@ function setup() {
 }
 
 describe('ButtonsMoreLess', () => {
-  it('should call oneMoreTodo pass by props', () => {
+  it('should call props.oneMoreTodoClick', () => {
     const { enzymeWrapper, props } = setup();
     // TODO : when update to material ui v1: use class to find (does not work decemer 17th 2017)
     const buttons = enzymeWrapper.find('button');
 
     const oneMoreToDoBtn = buttons.first();
-    expect(props.oneMoreTodo).not.toBeCalled();
+    expect(props.oneMoreTodoClick).not.toBeCalled();
     oneMoreToDoBtn.simulate('click', { preventDefault() {} });
-    expect(props.oneMoreTodo).toBeCalled();
+    expect(props.oneMoreTodoClick).toBeCalled();
   });
 
-  it('should call oneDone pass by props', () => {
+  it('should call props.oneDoneClick', () => {
     const { enzymeWrapper, props } = setup();
     // TODO : when update to material ui v1: use class to find (does not work decemer 17th 2017)
     const buttons = enzymeWrapper.find('button');
 
     const oneDoneButton = buttons.at(1);
-    expect(props.oneDone).not.toBeCalled();
+    expect(props.oneDoneClick).not.toBeCalled();
     oneDoneButton.simulate('click', { preventDefault() {} });
-    expect(props.oneDone).toBeCalled();
+    expect(props.oneDoneClick).toBeCalled();
   });
 
-  it('should call allDone pass by props', () => {
+  it('should call props.allDoneClic', () => {
     const { enzymeWrapper, props } = setup();
     // TODO : when update to material ui v1: use class to find (does not work decemer 17th 2017)
     const buttons = enzymeWrapper.find('button');
 
     const allDoneBtn = buttons.at(2);
-    expect(props.allDone).not.toBeCalled();
+    expect(props.allDoneClick).not.toBeCalled();
     allDoneBtn.simulate('click', { preventDefault() {} });
-    expect(props.allDone).toBeCalled();
+    expect(props.allDoneClick).toBeCalled();
   });
 });
 
@@ -70,9 +70,9 @@ describe('ButtonsMoreLess', () => {
 describe('ButtonsMoreLess', () => {
   const props = {
     orderId: 'id',
-    oneDone: () => {},
-    oneMoreTodo: () => {},
-    allDone: () => {},
+    oneDoneClick: () => {},
+    oneMoreTodoClick: () => {},
+    allDoneClick: () => {},
     labelOneDone: datas.txt.labelOneDone,
     labelOneMoreToDo: datas.txt.labelOneMoreToDo,
     labelAllDone: datas.txt.labelAllDone,

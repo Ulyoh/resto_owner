@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 
 const ButtonsMoreLess = (props) => {
-  const oneDone = (e) => {
+  const oneDoneClick = (e) => {
     e.preventDefault();
-    props.oneDone(props.orderId);
+    props.oneDoneClick(props.orderId);
   };
-  const oneMoreTodo = (e) => {
+  const oneMoreTodoClick = (e) => {
     e.preventDefault();
-    props.oneMoreTodo(props.orderId);
+    props.oneMoreTodoClick(props.orderId);
   };
-  const allDone = (e) => {
+  const allDoneClick = (e) => {
     e.preventDefault();
-    props.allDone(props.orderId);
+    props.allDoneClick(props.orderId);
   };
 
   const done = props.orderDone;
@@ -29,7 +29,7 @@ const ButtonsMoreLess = (props) => {
         className="oneMoreToDoBtn"
         label={props.labelOneMoreToDo}
         disabled={done <= 0}
-        onClick={oneMoreTodo}
+        onClick={oneMoreTodoClick}
         style={style}
       />
       {`${done}/${toDo}`}
@@ -37,7 +37,7 @@ const ButtonsMoreLess = (props) => {
         className="oneDoneBtn"
         label={props.labelOneDone}
         disabled={done >= toDo}
-        onClick={oneDone}
+        onClick={oneDoneClick}
         style={style}
       />
       {props.children}
@@ -45,7 +45,7 @@ const ButtonsMoreLess = (props) => {
         className="allDoneBtn"
         label={props.labelAllDone}
         disabled={done >= toDo}
-        onClick={allDone}
+        onClick={allDoneClick}
         style={style}
       />
     </div>);
@@ -53,9 +53,9 @@ const ButtonsMoreLess = (props) => {
 
 ButtonsMoreLess.propTypes = {
   orderId: PropTypes.string.isRequired,
-  oneDone: PropTypes.func.isRequired,
-  oneMoreTodo: PropTypes.func.isRequired,
-  allDone: PropTypes.func.isRequired,
+  oneDoneClick: PropTypes.func.isRequired,
+  oneMoreTodoClick: PropTypes.func.isRequired,
+  allDoneClick: PropTypes.func.isRequired,
   labelOneDone: PropTypes.string.isRequired,
   labelOneMoreToDo: PropTypes.string.isRequired,
   labelAllDone: PropTypes.string.isRequired,
