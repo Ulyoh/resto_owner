@@ -11,31 +11,40 @@ function setup() {
   const props = {
     list: [
       {
+        id: '1',
+        type: 'group',
         label: '1 checked',
         checked: true,
-        onCheck: jest.fn(),
       },
       {
+        id: '2',
+        type: 'group',
         label: '2 checked',
         checked: true,
-        onCheck: jest.fn(),
       },
       {
+        id: '3',
+        type: 'group',
         label: '3 not checked',
         checked: false,
-        onCheck: jest.fn(),
       },
       {
+        id: '4',
+        type: 'status',
         label: '4 not checked',
         checked: false,
-        onCheck: jest.fn(),
       },
       {
+        id: '15',
+        type: 'status',
         label: '5 checked5',
         checked: true,
-        onCheck: jest.fn(),
       },
     ],
+    cb: {
+      toggleFilterGroup: jest.fn(),
+      toggleFilterStatus: jest.fn(),
+    },
   };
 
   const enzymeWrapper = mount(<MuiThemeProvider><DropDownFilter {...props} /></MuiThemeProvider>);
@@ -63,13 +72,22 @@ describe('DropDownFilter', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   }); */
-  it('should call the onCheck function', () => {
+  it('should call the toggleFilterGroup function', () => {
     const { enzymeWrapper, props } = setup();
     /* TODO : when update to material ui v1: replace 'input' by 'CheckBox'
      in find (does not work at decemer 23th 2017) */
     const firstCheckBox = enzymeWrapper.find('input').first();
-    expect(props.list[0].onCheck).not.toBeCalled();
+    expect(props.cb.toggleFilterGroup).not.toBeCalled();
     firstCheckBox.simulate('change', { preventDefault() {} });
-    expect(props.list[0].onCheck).toBeCalled();
+    expect(props.cb.toggleFilterGroup).toBeCalledWith('1');
+  });
+  it('should call the toggleFilterStatus function', () => {
+    const { enzymeWrapper, props } = setup();
+    /* TODO : when update to material ui v1: replace 'input' by 'CheckBox'
+     in find (does not work at decemer 23th 2017) */
+    const firstCheckBox = enzymeWrapper.find('input').last();
+    expect(props.cb.toggleFilterStatus).not.toBeCalled();
+    firstCheckBox.simulate('change', { preventDefault() {} });
+    expect(props.cb.toggleFilterStatus).toBeCalledWith('15');
   });
 });
